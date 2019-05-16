@@ -1,0 +1,40 @@
+{
+    "types": [
+        {
+            "id": "type0",
+            "category": "category0",
+            "name": "Mortars",
+            "description": "Fireworks with a big boom"
+        },
+        {
+            "id": "type1",
+            "category": "category0",
+            "name": "Sparklers",
+            "description": "Fireworks for the kiddos"
+        },
+        {
+            "id": "type2",
+            "category": "category0",
+            "name": "Poppers",
+            "description": "Fireworks for slightly harming other people"
+        },
+        {
+            "id": "type3",
+            "category": "category1",
+            "name": "Grenades",
+            "description": "Handheld, throwable explosives"
+        },
+        {
+            "id": "type4",
+            "category": "category1",
+            "name": "Missiles",
+            "description": "Large projectile explosives with a big boom"
+        },
+        {
+            "id": "type5",
+            "category": "category1",
+            "name": "Makeshift",
+            "description": "Do it yourself explosives"
+        }
+    ]
+}
