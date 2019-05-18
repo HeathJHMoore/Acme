@@ -1,13 +1,29 @@
-import category from '../helpers/categoriesData';
+import categoryData from '../helpers/categoriesData';
 import type from '../helpers/typesData';
 
 
+// const initCategories = () => {
+//   category.loadCategories()
+//     .then((resp) => {
+//       const { categories } = resp.data;
+//       console.error(categories);
+//       type.getTypeForEachCategory(categories)
+//         .then((data) => {
+//           console.error(data);
+//         });
+//     })
+//     .catch(err => console.error('error from load boards', err));
+// };
+
+// for each through categories method
 const initCategories = () => {
-  category.loadCategories()
+  categoryData.loadCategories()
     .then((resp) => {
       const { categories } = resp.data;
       console.error(categories);
-      type.getTypeForEachCategory(categories);
+      categories.forEach((category) => {
+        type.getTypeForEachCategory(category.id);
+      });
     })
     .catch(err => console.error('error from load boards', err));
 };
