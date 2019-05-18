@@ -1,33 +1,58 @@
 import categoryData from '../helpers/categoriesData';
 import type from '../helpers/typesData';
 
+// let listOfProducts = [];
 
+// const printToDom = (divId, textToPrint) => {
+//   const selectedDiv = document.getElementById(divId);
+//   selectedDiv.innerHTML = textToPrint;
+// };
+
+// const productBuilder = (array) => {
+//   let domString = '';
+//   array.forEach((product) => {
+//     domString += '<div class="col-3">';
+//     domString += `<p>${product.category}`;
+//     domString += `<p>${product.type}`;
+//     domString += `<p>${product.productName}`;
+//     domString += `<p>${product.productDescription}`;
+//     domString += '</div>';
+//   });
+//   printToDom('productsContainer', domString);
+// };
+
+// // for each through categories method
 // const initCategories = () => {
-//   category.loadCategories()
+//   categoryData.loadCategories()
 //     .then((resp) => {
 //       const { categories } = resp.data;
 //       console.error(categories);
-//       type.getTypeForEachCategory(categories)
-//         .then((data) => {
-//           console.error(data);
-//         });
+//       categories.forEach((category) => {
+//         type.getTypeForEachCategory(category.id)
+//           .then((productList) => {
+//             console.error('look here', productList);
+//             productBuilder(productList);
+//           });
+//       });
 //     })
 //     .catch(err => console.error('error from load boards', err));
 // };
+
 
 // for each through categories method
 const initCategories = () => {
   categoryData.loadCategories()
     .then((resp) => {
       const { categories } = resp.data;
-      console.error(categories);
-      categories.forEach((category) => {
-        type.getTypeForEachCategory(category.id);
+      const categoryNames = [];
+      categories.forEach((cat) => {
+        const newName = cat.id;
+        categoryNames.push(newName);
       });
+      type.getTypeForEachCategory(categoryNames);
     })
-    .catch(err => console.error('error from load boards', err));
+    .catch('error');
 };
-
 
 // const initCategories = () => {
 //   category.loadCategories()
