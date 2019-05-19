@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-const finalArrayOfProducts = [];
-
 const getProductsForEachType = categoriesWithTypes => new Promise((resolve, reject) => {
+  const finalArrayOfProducts = [];
   axios.get('../db/products.json')
     .then((resp) => {
       const { products } = resp.data;
