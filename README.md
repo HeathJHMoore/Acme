@@ -5,4 +5,4 @@
 
 # How to Run
 
-`git clone` this repository and then run `npm install` in your terminal to install necessary packages. Then run `npm start` to launch the application to your browser for a live demo
+`git clone` this repository and then, at the root of the project, run `npm install` in your terminal to install necessary packages. Then run `npm start` to launch the application to your browser for a live demo
