@@ -1,5 +1,5 @@
 # Acme
-Order some cool fireworks with these "poppin" web app
+Order some cool fireworks with this "poppin" web app
 
 # Screenshot
 ![alt text](https://github.com/HeathJHMoore/Acme/blob/master/Screen%20Shot%202019-06-15%20at%209.33.37%20AM.png)
